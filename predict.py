@@ -11,7 +11,7 @@ bucket = storage_client.bucket("boston-house-price")
 blob = bucket.blob("best_model/model.joblib")
 model = joblib.load(blob.download_as_bytes())
 
-@app.route('/predict', methods=['POST'])
+    @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
     prediction = model.predict([data['features']])
