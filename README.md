@@ -34,3 +34,12 @@ gcloud projects add-iam-policy-binding boston-house-price-439411 \
   gcloud projects add-iam-policy-binding boston-house-price-439411 \
   --member=serviceAccount:github-actions@boston-house-price-439411.iam.gserviceaccount.com \
   --role=roles/storage.admin
+
+
+export PROJECT_ID="boston-house-price-439411"
+export REGION="australia-southeast1"
+export IMAGE_URI="australia-southeast1-docker.pkg.dev/$PROJECT_ID/ml-models/ml-model:latest"
+export SERVICE_NAME="ml-model-service"docker push $IMAGE_URI
+
+export GCS_BUCKET_NAME="boston-house-price"
+export MODEL_PATH="best_model/model.joblib"

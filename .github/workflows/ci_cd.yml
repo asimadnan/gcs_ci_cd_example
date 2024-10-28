@@ -59,7 +59,7 @@ jobs:
     - name: Check if new best model
       id: check_model
       run: |
-        if gsutil ls gs://your-model-bucket/best_model/model.joblib | grep -q .; then
+        if gsutil ls gs://boston-house-price/best_model/model.joblib | grep -q .; then
           echo "::set-output name=deploy::true"
         else
           echo "::set-output name=deploy::false"

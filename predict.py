@@ -11,11 +11,13 @@ bucket = storage_client.bucket("boston-house-price")
 blob = bucket.blob("best_model/model.joblib")
 model = joblib.load(blob.download_as_bytes())
 
-    @app.route('/predict', methods=['POST'])
+
+@app.route("/predict", methods=["POST"])
 def predict():
     data = request.json
-    prediction = model.predict([data['features']])
-    return jsonify({'prediction': prediction.tolist()})
+    prediction = model.predict([data["features"]])
+    return jsonify({"prediction": prediction.tolist()})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
