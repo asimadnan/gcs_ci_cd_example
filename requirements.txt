@@ -5,3 +5,4 @@ numpy
 wandb
 joblib
 google-cloud-storage
+flask
