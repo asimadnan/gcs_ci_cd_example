@@ -9,6 +9,7 @@ import joblib
 import json
 from google.cloud import storage
 import os
+import tempfile
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -37,8 +38,12 @@ def save_model_to_gcs(bucket_name, model, metrics, job_name):
     bucket = storage_client.bucket(bucket_name)
 
     # Save model
-    model_blob = bucket.blob(f"{job_name}/model.joblib")
-    model_blob.upload_from_string(joblib.dumps(model))
+    with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+        joblib.dump(model, temp_file.name)
+        temp_file.flush()
+        model_blob = bucket.blob(f"{job_name}/model.joblib")
+        model_blob.upload_from_filename(temp_file.name)
+    os.unlink(temp_file.name)
 
     # Save metrics
     metrics_blob = bucket.blob(f"{job_name}/metrics.json")

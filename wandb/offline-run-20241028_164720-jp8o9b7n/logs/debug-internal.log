@@ -1,0 +1,15 @@
+{"time":"2024-10-28T16:47:20.317284+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-28T16:47:20.317333+11:00","level":"INFO","msg":"created symlink","path":"/Users/asim/Documents/Dev Projects/gcs_ci_cd/wandb/offline-run-20241028_164720-jp8o9b7n/logs/debug-core.log"}
+{"time":"2024-10-28T16:47:20.629671+11:00","level":"INFO","msg":"created new stream","id":"jp8o9b7n"}
+{"time":"2024-10-28T16:47:20.629708+11:00","level":"INFO","msg":"stream: started","id":"jp8o9b7n"}
+{"time":"2024-10-28T16:47:20.629733+11:00","level":"INFO","msg":"sender: started","stream_id":"jp8o9b7n"}
+{"time":"2024-10-28T16:47:20.629934+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jp8o9b7n"}}
+{"time":"2024-10-28T16:47:20.629936+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jp8o9b7n"}}
+{"time":"2024-10-28T16:47:20.63616+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-28T16:47:23.887022+11:00","level":"INFO","msg":"stream: closing","id":"jp8o9b7n"}
+{"time":"2024-10-28T16:47:23.887065+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-28T16:47:23.887358+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-28T16:47:23.887816+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"jp8o9b7n"}}
+{"time":"2024-10-28T16:47:23.887827+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jp8o9b7n"}}
+{"time":"2024-10-28T16:47:23.887834+11:00","level":"INFO","msg":"sender: closed","stream_id":"jp8o9b7n"}
+{"time":"2024-10-28T16:47:23.887919+11:00","level":"INFO","msg":"stream: closed","id":"jp8o9b7n"}

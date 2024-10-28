@@ -1,0 +1,42 @@
+{
+  "os": "macOS-14.6.1-arm64-arm-64bit",
+  "python": "3.9.13",
+  "startedAt": "2024-10-28T05:52:46.062246Z",
+  "args": [
+    "--job_name",
+    "test_run"
+  ],
+  "program": "/Users/asim/Documents/Dev Projects/gcs_ci_cd/test_locally.py",
+  "codePath": "test_locally.py",
+  "git": {
+    "remote": "git@github.com:asimadnan/gcs_ci_cd_example.git",
+    "commit": "6042d443cd29a8df9bd3d42d59ecbc9772b48936"
+  },
+  "root": "/Users/asim/Documents/Dev Projects/gcs_ci_cd",
+  "host": "Asims-MacBook-Air.local",
+  "username": "asim",
+  "executable": "/Users/asim/miniforge3/bin/python",
+  "codePathLocal": "test_locally.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "245107195904",
+      "used": "232967450624"
+    }
+  },
+  "memory": {
+    "total": "8589934592"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 8
+  },
+  "apple": {
+    "name": "Apple M2",
+    "ecpuCores": 4,
+    "pcpuCores": 4,
+    "gpuCores": 8,
+    "memoryGb": 8
+  }
+}

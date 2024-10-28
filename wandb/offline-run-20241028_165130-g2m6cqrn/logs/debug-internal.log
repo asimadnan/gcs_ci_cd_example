@@ -1,0 +1,15 @@
+{"time":"2024-10-28T16:51:30.494167+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-28T16:51:30.494219+11:00","level":"INFO","msg":"created symlink","path":"/Users/asim/Documents/Dev Projects/gcs_ci_cd/wandb/offline-run-20241028_165130-g2m6cqrn/logs/debug-core.log"}
+{"time":"2024-10-28T16:51:30.602788+11:00","level":"INFO","msg":"created new stream","id":"g2m6cqrn"}
+{"time":"2024-10-28T16:51:30.60283+11:00","level":"INFO","msg":"stream: started","id":"g2m6cqrn"}
+{"time":"2024-10-28T16:51:30.602917+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"g2m6cqrn"}}
+{"time":"2024-10-28T16:51:30.602992+11:00","level":"INFO","msg":"sender: started","stream_id":"g2m6cqrn"}
+{"time":"2024-10-28T16:51:30.603033+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"g2m6cqrn"}}
+{"time":"2024-10-28T16:51:30.607043+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-28T16:51:33.690331+11:00","level":"INFO","msg":"stream: closing","id":"g2m6cqrn"}
+{"time":"2024-10-28T16:51:33.690552+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-28T16:51:33.690858+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-28T16:51:33.691163+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"g2m6cqrn"}}
+{"time":"2024-10-28T16:51:33.691177+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"g2m6cqrn"}}
+{"time":"2024-10-28T16:51:33.691193+11:00","level":"INFO","msg":"sender: closed","stream_id":"g2m6cqrn"}
+{"time":"2024-10-28T16:51:33.691255+11:00","level":"INFO","msg":"stream: closed","id":"g2m6cqrn"}
