@@ -35,26 +35,26 @@ jobs:
         docker build -t australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }} .
         docker push australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }}
     
-        - name: Train model
-        env:
+    - name: Train model
+      env:
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
-        run: |
-          if gcloud run jobs describe train-model-job --region australia-southeast1 &>/dev/null; then
-            echo "Updating existing job..."
-            gcloud run jobs update train-model-job \
-              --image australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }} \
-              --args="train,--job_name,${{ github.sha }}" \
-              --region australia-southeast1 \
-              --set-env-vars=WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}
-          else
-            echo "Creating new job..."
-            gcloud run jobs create train-model-job \
-              --image australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }} \
-              --args="train,--job_name,${{ github.sha }}" \
-              --region australia-southeast1 \
-              --set-env-vars=WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}
-          fi
-          gcloud run jobs execute train-model-job --region australia-southeast1 --wait
+      run: |
+        if gcloud run jobs describe train-model-job --region australia-southeast1 &>/dev/null; then
+          echo "Updating existing job..."
+          gcloud run jobs update train-model-job \
+            --image australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }} \
+            --args="train,--job_name,${{ github.sha }}" \
+            --region australia-southeast1 \
+            --set-env-vars=WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}
+        else
+          echo "Creating new job..."
+          gcloud run jobs create train-model-job \
+            --image australia-southeast1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ml-models/ml-model:${{ github.sha }} \
+            --args="train,--job_name,${{ github.sha }}" \
+            --region australia-southeast1 \
+            --set-env-vars=WANDB_API_KEY=${{ secrets.WANDB_API_KEY }}
+        fi
+        gcloud run jobs execute train-model-job --region australia-southeast1 --wait
     
     - name: Check if new best model
       id: check_model
