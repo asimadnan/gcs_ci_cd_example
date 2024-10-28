@@ -69,3 +69,8 @@ jobs:
       if: failure()
       run: |
         gcloud run logs read ml-model --region australia-southeast1 --limit=50
+    
+    - name: Test deployed model
+      run: |
+        CLOUD_RUN_URL=$(gcloud run services describe ml-model --region australia-southeast1 --format 'value(status.url)')
+        curl -X POST -H "Content-Type: application/json" -d '{"features": [0.00632, 18.0, 2.31, 0, 0.538, 6.575, 65.2, 4.09, 1, 296.0, 15.3, 396.9, 4.98]}' ${CLOUD_RUN_URL}/predict
