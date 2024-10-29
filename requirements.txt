@@ -6,3 +6,6 @@ wandb
 joblib
 google-cloud-storage
 flask
+fastapi
+uvicorn
+requests
